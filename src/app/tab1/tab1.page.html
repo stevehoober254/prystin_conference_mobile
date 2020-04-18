@@ -1,17 +1,54 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-toolbar color="primary" [hidden]="hideHeader">
+  <ion-buttons slot="end">
+    <ion-button (click)="notification()">
+      <ion-icon size="large" name="notifications"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content [fullscreen]="true" color="primary">
+  <div class="ion-padding title">
+    <ion-label class="tr">AFRICA YOUTH AND TALENT SUMMIT</ion-label><br>
+    <ion-label>9:00AM - 4:00PM 14-March 2020</ion-label><br>
+    <ion-label>KICC, Nairobi</ion-label>
+  </div>
+<div>
+ 
+</div>
+  <div id="bod">
+    <ion-icon src="../../assets/images/up.svg" class="dragup" color="primary" size="large" (click)="expand()"
+      *ngIf="!hideHeader"></ion-icon>
+    <ion-icon src="../../assets/images/down.svg" class="dragup" color="primary" size="large" (click)="compress()"
+      *ngIf="hideHeader"></ion-icon>
+    <br>
+    <ion-segment [(ngModel)]="selected">
+      <ion-segment-button value="agenda" checked>
+        <ion-label>Agenda</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="speakers">
+        <ion-label>Speakers</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <div *ngIf="selected == 'agenda'" class="agenda">
+      <app-steps [agenda]="agenda"></app-steps>
+      <app-steps [agenda]="agenda"></app-steps>
+      <app-steps [agenda]="agenda"></app-steps>
+      <app-steps [agenda]="agenda"></app-steps>
+      <app-steps [agenda]="agenda"></app-steps>
+      <app-steps [agenda]="agenda"></app-steps>
+      <app-steps [agenda]="agenda"></app-steps>
+    </div>
+    <div *ngIf="selected == 'speakers'" class="spkr">
+      <ion-row *ngFor="let item of agenda">
+        <ion-col size="4" class="col">
+          <img class="avatar" src="../../assets/images/profile.png">
+          <br>
+        </ion-col>
+        <ion-col>
+          <ion-label>Steve Hoober</ion-label><br>
+          <ion-label>C.E.O Crab House</ion-label>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
 </ion-content>

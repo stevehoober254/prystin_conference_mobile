@@ -1,0 +1,40 @@
+<ion-content color="primary">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button (click)="notification()">
+        <ion-icon size="large" name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="pr">
+    <img [src]="avatar.AvatarImage('SH')">
+  </div>
+  <div id="contain"> 
+    <div id="con">
+    </div>
+  </div>
+  <div class="content">
+    <div class="detail">
+      <ion-label>Steve Hoober</ion-label><br>
+      <ion-label class="mail">steve@gmail.com</ion-label>
+    </div>
+    <div class="recent ion-padding">
+      <ion-label style="font-weight: bold;">Your Past Conferences</ion-label>
+      <ion-item>
+        <ion-col size="3">14 March</ion-col>
+        <ion-col>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+        </ion-col>
+      </ion-item>
+      <ion-item>
+        <ion-col size="3">15 March</ion-col>
+        <ion-col>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+        </ion-col>
+      </ion-item>
+      <ion-item>
+        <ion-col size="3">16 March</ion-col>
+        <ion-col>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+        </ion-col>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>

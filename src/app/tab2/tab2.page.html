@@ -1,17 +1,46 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-toolbar color="primary">
+  <ion-buttons slot="end">
+    <ion-button (click)="notification()">
+      <ion-icon size="large" name="notifications"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+<ion-content color="primary" [scrollEvents]="true" (ionScroll)="onScroll($event)">
+  <div>
+    <ion-row class="toptag">
+      <ion-icon src="../../assets/images/qa.svg" class="icon"></ion-icon>&nbsp;&nbsp;
+      <ion-label class="title">Quantitative Aptitude</ion-label>
+    </ion-row>
+  </div>
+  <div id="body">
+    <div class="quiz">
+      <app-progress [quiz]="questions"></app-progress>
+    </div>
+    <div id="bd" >
+      <ion-row *ngFor="let item of questions;let i = index ;" >
+        <ion-col size="2">
+          <ion-label>{{i + 1}}</ion-label>
+        </ion-col >
+        <ion-col style="text-align: center;">
+          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+          <br>
+          <div>
+            <ion-card *ngFor="let item of choices; let j = index" [ngClass]="{'active': checked[j] == true}" (click)="select(j)">
+              <ion-buttons>
+                <ion-button slot="start">
+                  <ion-checkbox [checked]="checked[j]"></ion-checkbox>
+                </ion-button>
+                <ion-button slot="end">
+                  CHOICE {{j + 1}}
+                </ion-button>
+              </ion-buttons>
+            </ion-card>
+          </div>
+        </ion-col>
+       
+      </ion-row>
+    </div>
+  </div>
+  
 </ion-content>

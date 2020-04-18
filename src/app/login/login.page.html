@@ -1,0 +1,17 @@
+<ion-content>
+  <div class="logo">
+    <img src="../../assets/images/icon.png">
+    <br>
+    <ion-label class="logo-tag">Conference</ion-label><br><br><br>
+    <ion-label class="msg">
+      Log in with the email you used to register for the conference
+    </ion-label>
+  </div>
+<form [formGroup]="loginForm">
+<ion-input type="text" formControlName="email" placeholder="Enter Email Address" ></ion-input>
+<ion-button [disabled]="!loginForm.valid" expand="full" (click)="login()">
+ Login
+</ion-button>
+</form>
+
+</ion-content>

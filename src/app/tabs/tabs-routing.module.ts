@@ -38,6 +38,21 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'notification',
+        loadChildren: () => 
+        import('../notifications/notifications.module').then(m => m.NotificationsPageModule)
+      },
+      {
+        path: 'login',
+        loadChildren: () => 
+          import('../login/login.module').then(m => m.LoginPageModule)
+      },
+      {
+        path: 'profile',
+        loadChildren: () => 
+        import('../profile/profile.module').then(m => m.ProfilePageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
@@ -46,7 +61,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/login',
     pathMatch: 'full'
   }
 ];

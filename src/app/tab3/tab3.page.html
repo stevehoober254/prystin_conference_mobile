@@ -1,17 +1,98 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-toolbar color="primary">
+  <ion-buttons slot="end">
+    <ion-button (click)="notification()">
+      <ion-icon size="large" name="notifications"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+<ion-content color="primary">
+  <ion-segment [(ngModel)]="active" color="warning" (ionChange)="changedMonth($event)" class="segment" scrollable>
+      <ion-label></ion-label>
+    <ion-segment-button value="{{item}}" *ngFor="let item of months | slice:MonthIndex:12" checked="active">
+      <ion-card class="card {{item}}">
+        <ion-card-content class="dt">
+          <ion-label class="month">{{item}}</ion-label>
+        </ion-card-content>
+      </ion-card>
+    </ion-segment-button>
+  </ion-segment>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="body">
+    <div class="ion-text-center">&nbsp;
+      <b>{{thismonth}}</b>
+      <div class="search">
+        <ion-icon name="search" color="medium" (click)="showSearch()"></ion-icon>
+      </div>
+      <ion-searchbar placeholder="search events" *ngIf="showSearchBar"></ion-searchbar>
+    </div>
+    <ion-list>
+      <ion-item class="ion-padding" (click)="viewEnter(item)">
+        <ion-col size="2">
+          <ion-label>12 th</ion-label>
+        </ion-col>
+        <ion-col>
+          <span style="font-size: .9em;font-weight: bold;">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+            lorem ipsum</span>
+        </ion-col>
+      </ion-item>
+      <ion-item class="ion-padding">
+        <ion-col size="2">
+          <ion-label>12 th</ion-label>
+        </ion-col>
+        <ion-col>
+          <span style="font-size: .9em;font-weight: bold;">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+            lorem ipsum</span>
+        </ion-col>
+      </ion-item>
+      <ion-item class="ion-padding">
+        <ion-col size="2">
+          <ion-label>11 th</ion-label>
+        </ion-col>
+        <ion-col>
+          <span style="font-size: .9em;font-weight: bold;">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+            lorem ipsum</span>
+        </ion-col>
+      </ion-item>
+      <ion-item class="ion-padding">
+        <ion-col size="2">
+          <ion-label>13 th</ion-label>
+        </ion-col>
+        <ion-col>
+          <span style="font-size: .9em;font-weight: bold;">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+            lorem ipsum</span>
+        </ion-col>
+      </ion-item>
+      <ion-item class="ion-padding">
+        <ion-col size="2">
+          <ion-label>14 th</ion-label>
+        </ion-col>
+        <ion-col>
+          <span style="font-size: .9em;font-weight: bold;">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+            lorem ipsum</span>
+        </ion-col>
+      </ion-item>
+      <ion-item class="ion-padding">
+        <ion-col size="2">
+          <ion-label>15 th</ion-label>
+        </ion-col>
+        <ion-col>
+          <span style="font-size: .9em;font-weight: bold;">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+            lorem ipsum</span>
+        </ion-col>
+      </ion-item>
+      <ion-item class="ion-padding">
+        <ion-col size="2">
+          <ion-label>16 th</ion-label>
+        </ion-col>
+        <ion-col>
+          <span style="font-size: .9em;font-weight: bold;">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+            lorem ipsum</span>
+        </ion-col>
+      </ion-item>
+      
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    </ion-list>
+  </div>
+
+
 </ion-content>

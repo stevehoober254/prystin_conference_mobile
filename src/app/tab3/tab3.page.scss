@@ -1,3 +1,81 @@
-ion-content ion-toolbar {
-  --background: translucent;
+
+.card{
+  height: 100px;
+  border-radius: 10px;
+  width: 80px;
+}
+span{
+  font-size: .7em;
+}
+.body{
+  background-color: white;
+  // position: fixed;
+  width: 100%;
+  bottom: 0px;
+  padding-bottom: 10px;
+  top: 25%;
+  padding-top: 32px;
+  border-radius: 30px 30px 0px 0px;
+}
+.dt{
+  margin-top: 30px;
+}
+.segment{
+  overflow-y: scroll;
+}
+ion-list{
+  padding-bottom: 20px;
+  overflow-x: scroll;
+  height: 100%;
+}
+.month{
+  color: white;
+}
+b{
+  color: var(--ion-color-primary);
+  font-size: 1.3em;
+}
+.search{
+  float: right;
+  padding-right: 20px;
+  ion-icon{
+    font-size: 1.2em;
+  }
+}
+// months background color
+.Jan{
+  background-color: #4F759B;
+}
+.Feb{
+  background-color: #0f4c81;
+}
+.Mar{
+  background-color: #00a8cc
+}
+.Apr{
+  background-color: #75daad;
+}
+.May{
+  background-color: #5b8c5a;
+}
+.Jun{
+  background-color: #baf1a1;
+}
+.Jul{
+  background-color: #ffd868;
+}
+.Aug{
+  background-color: #ffa34d;
+}
+.Sep{
+  background-color: #f57b51;
+}
+.Oct{
+  background-color: #b80d57;
+}
+.Nov{
+  background-color: #ad62aa;
+}
+.Dec{
+  background-color: #4d089a;
 }

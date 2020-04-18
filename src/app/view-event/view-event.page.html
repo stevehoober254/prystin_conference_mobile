@@ -1,0 +1,49 @@
+<ion-content>
+  <div class="cover-img" [ngStyle]="{ 'background-image': 'url(' + url + ')'}">
+    <!-- <img src=""> -->
+    <ion-icon name="arrow-back" class="icon" (click)="close()" size="large"></ion-icon>
+    <ion-label id="label" >
+      AFRICA YOUTH AND TALENT SUMMIT, NAIROBI KENYA
+      <br><br>
+      <span> 25 Jul</span>
+    </ion-label>
+    <div class="free">
+      <ion-label color="success" class="ion-padding lb">Free</ion-label>
+    </div>
+  </div>
+  <div class="date">
+
+   <ion-label id="title">Date And Time</ion-label> <br><br>
+    <ion-text class="text">
+      Sat, July 25, 2020
+    <br><br>
+      8:00 AM – 4:00 PM EAT
+    </ion-text><br><br>
+    <ion-label color="primary">Add to Calendar</ion-label>
+  </div>
+  <div class="date">
+
+    <ion-label id="title">Location</ion-label> <br><br>
+     <ion-text class="text">
+      Sarakasi Dome
+     <br><br>
+     Ngara Road, Nairobi
+     </ion-text><br><br>
+     <ion-label color="primary">View Map</ion-label>
+   </div>
+   <div class="date">
+
+    <ion-label id="title">Description</ion-label> <br><br>
+     <ion-text class="text">
+      lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+     </ion-text>
+    
+   </div>
+   <br>
+</ion-content>
+<ion-footer>
+  <div class="ion-text-center">
+    <ion-label style="font-weight: bold;" color="danger">SOLD OUT</ion-label><br>
+  </div>
+  <ion-button expand="full" shape="round" color="success" disabled>Register</ion-button>
+</ion-footer>

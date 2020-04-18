@@ -1,0 +1,31 @@
+  <ion-toolbar color="primary">
+    <ion-buttons>
+      <ion-button slot="start" (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-title class="ion-text-center">Notifications</ion-title>
+    </ion-buttons>
+   
+  </ion-toolbar>
+
+<ion-content >
+  <ion-list>
+    <ion-item *ngFor="let item of notices" id="item">
+      <ion-col size="2">
+        <img src="../../assets/images/profile.png">
+      </ion-col>
+      <ion-col>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </ion-col>
+    </ion-item>
+    <ion-item *ngFor="let item of notices" id="item">
+      <ion-col size="2">
+        <img src="../../assets/images/profile.png">
+      </ion-col>
+      <ion-col>
+        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+      </ion-col>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

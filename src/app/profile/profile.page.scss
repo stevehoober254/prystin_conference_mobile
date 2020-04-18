@@ -1,0 +1,48 @@
+.pr{
+    text-align: center;
+    background-color: var(--ion-color-primary);
+    img{
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+        margin-top: 10%;
+    }
+}
+.content{
+    position: fixed;
+    bottom: 0px;
+    background-color: white;
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    top:30%;
+    
+    
+}
+ #contain{
+     width: 100%;
+     text-align: center;
+     #con{
+        width: 100px;
+        height: 55px;
+        background-color: white;
+        margin: auto;
+        border-radius: 150px 150px 0px 0px;
+    }
+
+ }   
+.recent{
+ color: grey;
+ justify-content: start;
+ padding-top: 30px;
+}
+.detail{
+    padding-top: 20px;
+    color: grey;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1;
+    .mail{
+        font-size: .9em;
+    }
+}
